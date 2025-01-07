@@ -120,4 +120,26 @@ public class WarmUp1 {
         return str.startsWith("ix", 1);
     }
 
+    public int intMax(int a, int b, int c) {
+        int max;
+        if (a > b) {
+            max = a;
+        } else {
+            max = b;
+        }
+        return c > max ? c : max;
+    }
+
+    public int close10(int a, int b) {
+        int diffA = Math.abs(10 - a);
+        int diffB = Math.abs(10 - b);
+        if (diffA == diffB) return 0;
+        else return diffA > diffB ? b : a;
+    }
+
+    public boolean in3050(int a, int b) {
+        return ((a <= 40 && a >= 30) && (b >= 30 && b <= 40))
+                || ((a <= 50 && a >= 40) && (b >= 40 && b <= 50));
+    }
+
 }
