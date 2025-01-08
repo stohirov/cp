@@ -142,4 +142,50 @@ public class WarmUp1 {
                 || ((a <= 50 && a >= 40) && (b >= 40 && b <= 50));
     }
 
+    public String startOz(String str) {
+        String res = "";
+        if (!str.isEmpty()) {
+            res += str.charAt(0) == 'o' ? 'o' : "";
+            if (str.length() > 1) res += str.charAt(1) == 'z' ? 'z' : "";
+        }
+        return res;
+    }
+
+    public int max1020(int a, int b) {
+        a = (a >= 10 && a <= 20) ? a : 0;
+        b = (b >= 10 && b <= 20) ? b : 0;
+        return a > b ? a : b;
+    }
+
+    public boolean stringE(String str) {
+        int eCount = 0;
+        for (char c: str.toCharArray()) {
+            if (c == 'e') eCount++;
+        }
+        return eCount > 0 && eCount < 4;
+    }
+
+    public boolean lastDigit(int a, int b) {
+        return a % 10 == b % 10;
+    }
+
+    public String endUp(String str) {
+        int length = str.length();
+        if (length <= 3) return str.toUpperCase();
+        return str.substring(0, length - 3) + str.substring(length - 3).toUpperCase();
+    }
+
+    public String everyNth(String str, int n) {
+        int i = 0;
+        int length = str.length();
+        String res = "";
+        while (i < length) {
+            res += str.charAt(i);
+            i += n;
+        }
+        return res;
+    }
+
+
+
 }
