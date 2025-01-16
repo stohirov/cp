@@ -101,4 +101,63 @@ public class WarmUp2 {
         return false;
     }
 
+    public String stringX(String str) {
+        String res = "";
+        for (int i = 0; i < str.length(); i++) {
+            char curr = str.charAt(i);
+            if ((i == 0 || i == str.length() - 1) && curr == 'x') res += curr;
+            if (curr != 'x') {
+                res += curr;
+            }
+        }
+        return res;
+    }
+
+    public String altPairs(String str) {
+        String res = "";
+        for (int i = 0; i < str.length(); i+=4) {
+            for (int j = i; j < i + 2; j++) {
+                if (j < str.length()) res += str.charAt(j);
+            }
+        }
+        return res;
+    }
+
+    public String stringYak(String str) {
+        str = str.replaceAll("yak", "");
+        return str;
+    }
+
+    public int array667(int[] nums) {
+        int count = 0;
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == 6 && (nums[i + 1] == 6 || nums[i + 1] == 7)) count++;
+        }
+        return count;
+    }
+
+    public boolean noTriples(int[] nums) {
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (nums[i] == nums[i + 1] && nums[i + 1] == nums[i + 2]) return false;
+        }
+        return true;
+    }
+
+    public boolean has271(int[] nums) {
+        for (int i = 0; i < nums.length - 1; i++) {
+            int curr = nums[i];
+            if (nums[i + 1] == curr + 5 && (nums[i + 2] >= curr - 3 && nums[i + 2] < curr + 2)) return true;
+        }
+        return false;
+    }
+
+    public int stringMatch(String a, String b) {
+        int count = 0;
+        int length = Math.min(a.length(), b.length());
+        for (int i = 0; i < length - 1; i++) {
+            if (a.substring(i, i + 2).equals(b.substring(i, i + 2))) count++;
+        }
+        return count;
+    }
+
 }
