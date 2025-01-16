@@ -1,13 +1,11 @@
 package solutions;
 
-import solutions.codingbat.String1;
+import solutions.codewars.Kata;
 
 public class Main {
     public static void main(String[] args) {
 
-        String1 warmUp2 = new String1();
-        String a = "kitten";
-        String b = "";
-        System.out.println(warmUp2.lastChars(a, b));
+        Kata warmUp2 = new Kata();
+        System.out.println(warmUp2.toJadenCase(null));
     }
 }
