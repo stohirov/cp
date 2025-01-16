@@ -98,6 +98,61 @@ public class String1 {
         return str.length() - 1 > index && index > 0 ? str.substring(index, index + 2) : str.substring(0, 2);
     }
 
+    public String middleThree(String str) {
+        int length = str.length();
+        return length < 3 ? str : str.substring(length / 2 - 1, length / 2 + 2);
+    }
+
+    public boolean hasBad(String str) {
+        return str.indexOf("bad") == 0 || str.indexOf("bad") == 1;
+    }
+
+    public String atFirst(String str) {
+        StringBuilder res = new StringBuilder(str);
+        if (str.length() >= 2) {
+            return str.substring(0, 2);
+        } else {
+            for (int i = 0; i < 2; i++) {
+                if (res.length() < 2) {
+                    res.append("@");
+                }
+            }
+        }
+        return res.toString();
+    }
+
+    public String lastChars(String a, String b) {
+        int lengthA = a.length();
+        int lengthB = b.length();
+        if (lengthA == 0) a = "@";
+        if (lengthB == 0) b = "@";
+        return a.charAt(0) + b.substring(b.length() - 1);
+    }
+
+    public String conCat(String a, String b) {
+        return (!a.isEmpty() && !b.isEmpty()) &&
+                a.charAt(a.length() - 1) == b.charAt(0) ?
+                a.concat(b.substring(1)) : a.concat(b);
+    }
+
+    public String lastTwo(String str) {
+        int length = str.length();
+        if (length < 2) return str;
+        return str.substring(0, length - 2) + str.charAt(length - 1) + str.charAt(length - 2);
+    }
+
+    public String seeColor(String str) {
+        boolean red = str.startsWith("red");
+        boolean blue = str.startsWith("blue");
+        if (!red && !blue) return "";
+        return red ? str.substring(0, 3) : str.substring(0, 4);
+    }
+
+    public boolean frontAgain(String str) {
+        if (str.length() < 2) return false;
+        return str.substring(0, 2).equals(str.substring(str.length() - 2));
+    }
+
 
 
 }

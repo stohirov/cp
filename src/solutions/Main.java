@@ -1,12 +1,13 @@
 package solutions;
 
-import solutions.codingbat.WarmUp2;
+import solutions.codingbat.String1;
 
 public class Main {
     public static void main(String[] args) {
 
-        WarmUp2 warmUp2 = new WarmUp2();
-        String str = "xxxyakyyyakzzz";
-        System.out.println(warmUp2.stringYak(str));
+        String1 warmUp2 = new String1();
+        String a = "kitten";
+        String b = "";
+        System.out.println(warmUp2.lastChars(a, b));
     }
 }
