@@ -153,6 +153,13 @@ public class String1 {
         return str.substring(0, 2).equals(str.substring(str.length() - 2));
     }
 
+    public String minCat(String a, String b) {
+        int lengthA = a.length();
+        int lengthB = b.length();
+        return lengthA > lengthB ? a.substring(lengthA - lengthB).concat(b) :
+                a.concat(b.substring(lengthB - lengthA));
+    }
+
 
 
 }
