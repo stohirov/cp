@@ -160,6 +160,21 @@ public class String1 {
                 a.concat(b.substring(lengthB - lengthA));
     }
 
+    public String extraFront(String str) {
+        String res = "";
+        for (int i = 0; i < 3; i++) {
+            if (str.length() >= 2) res += str.substring(0, 2);
+            else res += str;
+        }
+        return res;
+    }
 
+    public String without2(String str) {
+        if (str.length() < 2) return str;
+        String s = str.substring(0, 2);
+        return str.startsWith(s) && str.endsWith(s) ? str.substring(2) : str;
+    }
+
+    
 
 }
