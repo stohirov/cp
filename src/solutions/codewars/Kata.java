@@ -54,5 +54,22 @@ public class Kata {
         return res;
     }
 
+    public static String createPhoneNumber(int[] numbers) {
+        return String.format("(%d%d%d) %d%d%d-%d%d%d%d",numbers[0],numbers[1],numbers[2],numbers[3],numbers[4],numbers[5],numbers[6],numbers[7],numbers[8],numbers[9]);
+    }
+
+    public static String shortenToDate(String longDate) {
+        return longDate.split(",")[0];
+    }
+
+    public static String shark(int pontoonDistance, int sharkDistance,
+                               int youSpeed, int sharkSpeed, boolean dolphin) {
+        return "";
+    }
+
+    public static boolean isDigit(String s) {
+        return s.matches("[0-9]");
+    }
+
 
 }
