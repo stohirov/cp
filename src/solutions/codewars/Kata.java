@@ -1,7 +1,9 @@
 package solutions.codewars;
 
 import java.math.BigInteger;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class Kata {
 
@@ -71,5 +73,20 @@ public class Kata {
         return s.matches("[0-9]");
     }
 
+    public static String[] solution(String s) {
+        if (s.isEmpty()) return new String[]{};
+        String[] strings = new String[s.length() / 2];
+
+        if (s.length() % 2 != 0) {
+            s = s.concat("_");
+            strings = new String[s.length() / 2 + 1];
+        }
+        int count = 0;
+        for (int i = 0; i < s.length() - 1; i+=2) {
+            strings[count] = s.substring(i, i + 2);
+            count++;
+        }
+        return strings;
+    }
 
 }
