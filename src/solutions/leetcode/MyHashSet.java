@@ -5,22 +5,30 @@ import java.util.HashMap;
 // Solution 705
 public class MyHashSet {
 
-    private static final Object PRESENT = new Object();
-    private HashMap<Integer, Object> map;
+    int[] numbers;
 
     public MyHashSet() {
-        map = new HashMap<>();
+        numbers = new int[31251];
     }
 
     public void add(int key) {
-        map.put(key, PRESENT);
+        numbers[getIdX(key)] |= getMask(key);
+    }
+
+    private int getIdX(int key) {
+        return (key / 32);
+    }
+
+    private int getMask(int key) {
+        key %= 32;
+        return (1 << key);
     }
 
     public void remove(int key) {
-        map.remove(key);
+        numbers[getIdX(key)] &= (~getMask(key));
     }
 
     public boolean contains(int key) {
-        return map.get(key) == PRESENT;
+        return (numbers[getIdX(key)] & getMask(key)) != 0;
     }
 }
