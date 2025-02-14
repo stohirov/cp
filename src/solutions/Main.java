@@ -1,9 +1,9 @@
 package solutions;
 
-import solutions.leetcode.Solution50;
+import solutions.leetcode.Solution367;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println(Solution50.myPow(2.1000, 3));
+        System.out.println(Solution367.isPerfectSquare(16));
     }
 }
