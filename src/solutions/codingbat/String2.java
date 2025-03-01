@@ -82,4 +82,21 @@ public class String2 {
         return indexX < indexY;
     }
 
+    public String mixString(String a, String b) {
+        String res = "";
+        int length = Math.min(a.length(), b.length());
+        for(int i=0; i<length; i++){
+            res = res + a.charAt(i)+b.charAt(i);
+        }
+
+        if(a.length() > length){
+            res += a.substring(length);
+        }else{
+            res += b.substring(length);
+        }
+
+        return res;
+    }
+
+
 }
