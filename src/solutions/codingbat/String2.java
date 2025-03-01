@@ -155,4 +155,15 @@ public class String2 {
         }
     }
 
+    public String getSandwich(String str) {
+        if (!str.contains("bread")) return "";
+
+        int firstIndex = str.indexOf("bread");
+        int lastIndex = str.lastIndexOf("bread");
+
+        if (lastIndex == firstIndex) return "";
+
+        return str.substring(firstIndex + 5, lastIndex);
+    }
+
 }
