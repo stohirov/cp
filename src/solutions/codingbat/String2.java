@@ -1,5 +1,7 @@
 package solutions.codingbat;
 
+import java.util.Map;
+import java.util.Objects;
 import java.util.Stack;
 
 public class String2 {
@@ -134,6 +136,23 @@ public class String2 {
         String first = str.substring(0,n);
 
         return str.substring(n).contains(first);
+    }
+
+    public boolean xyzMiddle(String str) {
+        if (str.equals("xyz")) return true;
+        if (str.length() < 3) return false;
+
+        int mid = str.length() / 2;
+
+        if (str.length() % 2 == 1) {
+            return str.length() >= 5 && str.substring(mid - 1, mid + 2).contains("xyz");
+        } else {
+            boolean foundXYZ = str.substring(mid - 2, mid + 1).contains("xyz") ||
+                    str.substring(mid - 1, mid + 2).contains("xyz");
+
+            int leftSize = mid - 1, rightSize = str.length() - (mid + 2);
+            return foundXYZ && Math.abs(leftSize - rightSize) < 2;
+        }
     }
 
 }
