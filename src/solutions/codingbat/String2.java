@@ -114,4 +114,20 @@ public class String2 {
         return response;
     }
 
+    public String repeatSeparator(String word, String sep, int count) {
+        String response = "";
+
+        if (count == 0) {
+            return response;
+        } else if (count == 1) {
+            response += word;
+            return response;
+        }
+        response += word;
+        for (int i = 0; i < count-1; i++) {
+            response += sep.concat(word);
+        }
+        return response;
+    }
+
 }
