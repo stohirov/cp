@@ -57,5 +57,14 @@ public class String2 {
         return x.contains("xyz");
     }
 
+    public boolean bobThere(String str) {
+        int length = str.length();
+        for (int i = 0; i < length-2; i++) {
+            if (str.charAt(i) == 'b' && str.charAt(i + 2) == 'b') {
+                return true;
+            }
+        }
+        return false;
+    }
 
 }
