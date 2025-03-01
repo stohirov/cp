@@ -130,4 +130,10 @@ public class String2 {
         return response;
     }
 
+    public boolean prefixAgain(String str, int n) {
+        String first = str.substring(0,n);
+
+        return str.substring(n).contains(first);
+    }
+
 }
