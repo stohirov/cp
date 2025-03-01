@@ -106,4 +106,12 @@ public class String2 {
         return response;
     }
 
+    public String repeatFront(String str, int n) {
+        String response = "";
+        for (int i = 0; i < n; i++) {
+            response += str.substring(0,n-i);
+        }
+        return response;
+    }
+
 }
