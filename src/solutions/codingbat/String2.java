@@ -35,5 +35,15 @@ public class String2 {
         return countCat == countDog;
     }
 
+    public int countCode(String str) {
+        int countCode = 0;
+        int length = str.length();
+        for (int i = 0; i < length-3; i++) {
+            if (str.substring(i,i+2).equals("co") &&
+                    str.charAt(i + 3) == 'e')
+                countCode++;
+        }
+        return countCode;
+    }
 
 }
