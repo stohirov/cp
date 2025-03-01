@@ -1,5 +1,7 @@
 package solutions.codingbat;
 
+import java.util.Stack;
+
 public class String2 {
     public String doubleChar(String str) {
         String sum = "";
@@ -65,6 +67,19 @@ public class String2 {
             }
         }
         return false;
+    }
+
+    public boolean xyBalance(String str) {
+        if (!str.contains("x") && !str.contains("y")) return true;
+
+        int indexX = -1;
+        int indexY = -1;
+
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) == 'x') indexX = i;
+            if (str.charAt(i) == 'y') indexY = i;
+        }
+        return indexX < indexY;
     }
 
 }
