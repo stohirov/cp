@@ -98,5 +98,12 @@ public class String2 {
         return res;
     }
 
+    public String repeatEnd(String str, int n) {
+        String response = "";
+        for (int i = 0; i < n; i++) {
+            response += str.substring(str.length()-n);
+        }
+        return response;
+    }
 
 }
