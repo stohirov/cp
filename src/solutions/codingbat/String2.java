@@ -52,4 +52,10 @@ public class String2 {
         return (lowerA.endsWith(lowerB) || lowerB.endsWith(lowerA));
     }
 
+    public boolean xyzThere(String str) {
+        String x = str.replaceAll("\\.xyz", "");
+        return x.contains("xyz");
+    }
+
+
 }
