@@ -2,13 +2,16 @@ package solutions.leetcode;
 
 public class Solution9 {
     public static boolean isPalindrome(int x) {
-        if (x < 0 || x % 10 == 0) return false;
+        if (x < 0) return false;
+
+        int result = 0;
         int temp = x;
-        int num = 0;
+
         while (temp != 0) {
-            num = (num * 10) + temp % 10;
+            result = (result * 10) + temp % 10;
             temp /= 10;
         }
-        return x == num;
+
+        return result == x;
     }
 }
