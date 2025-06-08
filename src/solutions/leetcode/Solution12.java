@@ -1,8 +1,5 @@
 package solutions.leetcode;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class Solution12 {
     public String intToRoman(int num) {
         StringBuilder sb = new StringBuilder();
