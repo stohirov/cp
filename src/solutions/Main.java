@@ -1,10 +1,13 @@
 package solutions;
 
 import solutions.codingbat.String2;
+import solutions.leetcode.Solution171;
+
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        String2 string2 = new String2();
-        System.out.println(string2.getSandwich("xxbreadbreadjambreadyy"));
+        String title = new Scanner(System.in).nextLine();
+        System.out.println(Solution171.titleToNumber(title));
     }
 }
