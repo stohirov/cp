@@ -1,4 +1,4 @@
-package solutions.codeforces.EthflowRound1;
+package solutions.codeforces.contests;
 
 import java.util.Scanner;
 

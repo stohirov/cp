@@ -1,3 +1,5 @@
+package solutions.codeforces.contests;
+
 import java.util.*;
 
 public class Clockwork {
