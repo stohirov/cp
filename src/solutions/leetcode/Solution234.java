@@ -7,7 +7,7 @@ import java.util.Stack;
 public class Solution234 {
     public boolean isPalindrome(ListNode head) {
         ListNode slow = head;
-        ListNode fast = head;
+        ListNode fast = head; //ssss
         Stack<Integer> stack = new Stack<>();
 
         while (fast != null && fast.next != null) {
